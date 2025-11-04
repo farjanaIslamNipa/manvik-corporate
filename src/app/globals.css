@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #131010;
+  --foreground: #DFD0B8;
 }
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -17,7 +17,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #c3bdb5;
   }
 }
 
@@ -27,3 +27,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* inside layer base we can set style to the default html tag */
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+}
+
+.container {
+  @apply max-w-[1560px] mx-auto px-4
+}
