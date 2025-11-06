@@ -3,6 +3,8 @@
 :root {
   --background: #131010;
   --foreground: #DFD0B8;
+  --brandColor: #b28034;
+  --darkBrand: #543A14;
 }
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -11,7 +13,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
+  --color-brand: var(--brandColor);
+  --color-dark-brand: var(--darkBrand);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,4 +42,59 @@ body {
 
 .container {
   @apply max-w-[1560px] mx-auto px-4
+}
+
+.swiper {
+  width: 270px;
+  height: 380px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
 }
